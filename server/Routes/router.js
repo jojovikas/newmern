@@ -10,4 +10,20 @@ router.post(
   controllers.userpost
 );
 
+router.get("/users/details", controllers.userget);
+router.get("/user/:id", controllers.singleuserget);
+
+//UPDATE USER DATA
+router.put(
+  "/user/edit/:id",
+  upload.single("user_profile"),
+  controllers.useredit
+);
+
+//Delete User Data
+router.delete("/user/delete/:id", controllers.userdelete);
+
+//update status
+router.put("/user/status/:id", controllers.userstatus);
+
 module.exports = router;
