@@ -174,3 +174,7 @@ exports.userstatus = async (req, res) => {
     res.status(401).json(error);
   }
 };
+
+//export user in csv
+
+exports.userExport = async (req, res) => {};

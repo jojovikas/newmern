@@ -26,4 +26,8 @@ router.delete("/user/delete/:id", controllers.userdelete);
 //update status
 router.put("/user/status/:id", controllers.userstatus);
 
+//api for export to csv
+
+router.get("/user/export", controllers.userExport);
+
 module.exports = router;
